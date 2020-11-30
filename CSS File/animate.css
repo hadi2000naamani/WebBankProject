@@ -1,0 +1,42 @@
+@keyframes anim {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* 
+#SideBarList ~ li{
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+} */
+
+#containerAbout1 {
+  animation-name: anim;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+#cardSection1 {
+  animation-name: anim1;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}

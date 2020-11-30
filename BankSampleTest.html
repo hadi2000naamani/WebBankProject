@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/university-solid.png" />
+    <title>BankSample</title>
+    <link rel="stylesheet" href="./CSS File/banksample.css" />
+    <link rel="stylesheet" href="./CSS File/aboutUs2.0Alayli.css" />
+    <link rel="stylesheet" href="./CSS File/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Raleway', sans-serif">
+    <div id="SideMenu">
+      <ul id="SideBarList">
+        <li id="profileTab">
+          <i
+            class="fas fa-user-alt fa-2x text-secondary"
+            style="padding-right: 7%"
+          ></i
+          >Profile
+        </li>
+        <li class="animItem"><a href="#">Edit Profile</a></li>
+        <li class="animItem"><a href="#">Business</a></li>
+        <li class="animItem"><a href="#">Picture Gallery</a></li>
+        <li class="animItem"><a href="#">Maintenance Team</a></li>
+        <li class="hiddenItem animItem"><a href="#">Home</a></li>
+        <li class="hiddenItem animItem"><a href="#">Contact Us</a></li>
+        <li class="hiddenItem animItem"><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div id="MainContent">
+      <nav class="Navbar">
+        <ul>
+          <li><button id="SideButton"></button></li>
+          <li><a href="#MainContent">Home</a></li>
+          <li><a href="#contactus">Contact Us</a></li>
+          <li><a href="#containerAbout1">About Us</a></li>
+          <li id="pageTitle" style="padding-right: 5%">
+            <h1 class="text-center">Bank Sample</h1>
+          </li>
+          <li>
+            <button id="signup" class="btn btn-outline-warning btn-block text-dark">
+              Sign Up
+            </button>
+          </li>
+          <li>
+            <button id="login" class="btn btn-outline-primary btn-block text-dark">
+              Log In
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="hero"></div>
+
+      <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+        
+          <div class="carousel-inner">
+            <div class="item active slideImages">
+              <img src="img/Coins.jpg" id="coinsImg" alt="Los Angeles">
+            </div>
+        
+            <div class="item slideImages">
+              <img src="img/Building.jpg" id="buildingImg" alt="Chicago">
+            </div>
+        
+            <div class="item slideImages">
+              <img src="img/World.jpg" id="worldImg" alt="New York">
+            </div>
+          </div>
+      
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div> -->
+
+      <!--Cards-->
+      <section id="cardSection1">
+        <div  class="container-fluid">
+          <div class="row justify-content-md-center">
+            <div class="col-xl-10 col-lg-9 col-md-8">
+              <div class="row pt-md-5 mt-md-3 mb-5">
+                <div id="applyloan" class="col-xl-3 col-sm-6 p-2">
+                  <div class="card card-common pr-5">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <i class="fas fa-money-bill-alt fa-2x text-warning"></i>
+                        <div class="text-right text-secondary">
+                          <h4>Apply for a Loan</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-secondary"></div>
+                  </div>
+                </div>
+                <div id="register" class="col-xl-3 col-sm-6 p-2">
+                  <div class="card card-common pr-5">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <i class="fas fa-address-card fa-2x text-danger"></i>
+                        <div class="text-secondary text-right">
+                          <h4>Register a Card</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-secondary"></div>
+                  </div>
+                </div>
+                <div id="meeting" class="col-xl-3 col-sm-6 p-2">
+                  <div class="card card-common pr-5">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <i class="fas fa-users fa-2x text-info"></i>
+                        <div class="text-secondary text-right">
+                          <h4>Setup a Meeting</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-secondary"></div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 p-2">
+                  <div class="card card-common pr-5">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                        <i class="fas fa-chart-line fa-2x text-danger"></i>
+                        <div class="text-secondary text-right">
+                          <h4>Check Stock Market</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-secondary"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End of cards-->
+
+      <!-- About Us Start -->
+
+      <div id="containerAbout1">
+        <h1>About Us</h1>
+        <div id="textAbout1">
+          <p>
+            Bank Sample is a Lebanese bank with a one and only goal, to provide
+            cutomers with the best facilities and opportunities for a better
+            life. As a family to our customers, we try to help them achieve
+            their goals by supporting them financially and morally using our
+            confidential services, in order to treatm and hande each and every
+            case and issue. We believe that out country is going through hard
+            circumstances therefore we stand together with our customers to
+            overcome this crisis. Our operations are based on a universal
+            banking model that includes: Commercial Banking, Corporate Banking,
+            Private Banking, Investment Banking, Retail Banking, Islamic
+            Banking, Asset and Wealth Management, Capital Market Services, and
+            Insurance products and services.
+          </p>
+        </div>
+        <div id="backgroundAbout1"></div>
+
+        <div id="collectionAbout1">
+          <h2>Bank Sample Stats</h2>
+          <div class="card1">
+            <img src="img/employee.png" />
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="font-italic">Spread</h3>
+              </div>
+              <div class="card-subtitle">
+                <p class="text secondary font-italic">
+                  50 branches in different Lebanon countries and cities
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <img src="img/branch.jpg" />
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="font-italic">One hand</h3>
+              </div>
+              <div class="card-subtitle">
+                <p class="text secondary font-italic">
+                  200 employees to make your day!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <img src="img/CUSS.jpg" />
+            <div class="card-body">
+              <div class="card-title">
+                <h3 class="font-italic">confidential</h3>
+              </div>
+              <div class="card-subtitle">
+                <p class="text secondary font-italic">
+                  1 million personal and business cutomers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About Us End -->
+
+      <section id="contactus" class="p-5 bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col text-center m-3">
+              <h1 class="text-dark display-4">Contact Us</h1>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-sm-10 col-md-8">
+              <div class="text-center text-secondary">
+                <h2>Got Question?</h2>
+                <p>Stay connected</p>
+              </div>
+              <form class="text-muted">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="email" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <button class="btn btn-outline-warning btn-block" type="submit">
+                  Submit
+                </button>
+                <br />
+                <p class="text-info text-center">
+                  Or you can call us on 01 500 300
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="text-center col">
+              <h1 class="text-dark p-3 font-italic">Bank Sample Test Site</h1>
+              <div class="py-2">
+                <a href="#"><i class="fab fa-instagram fa-2x mx-2"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x mx-2"></i></a>
+                <a href="#"><i class="fab fa-whatsapp fa-2x mx-2"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-2x mx-2"></i></a>
+              </div>
+              <p class="py-4">&copy;Copyright 2020</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./Java File/clicks.js"></script>
+    <script>
+      var SideButton = document.getElementById("SideButton");
+      var MainContent = document.getElementById("MainContent");
+      var SideMenu = document.getElementById("SideMenu");
+
+      SideButton.addEventListener("click", toggleSideMain);
+
+      function toggleSideMain() {
+        if (!MainContent.className) {
+          MainContent.classList.add("Shifted");
+          SideMenu.classList.add("Shifted");
+        } else {
+          MainContent.classList.remove("Shifted");
+          SideMenu.classList.remove("Shifted");
+        }
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/4c8ff7f160.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>

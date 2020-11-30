@@ -1,0 +1,82 @@
+#containerAbout1 {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2%;
+}
+
+#textAbout1 {
+  flex-basis: 30%;
+  background-color: lightsteelblue;
+  text-align: center;
+  box-sizing: border-box;
+  margin-right: 0.25%;
+  margin-bottom: 0.25%;
+  padding-left: 1%;
+  padding-right: 1%;
+  box-sizing: border-box;
+  border-radius: 10px 0 0 0;
+}
+
+#backgroundAbout1 {
+  background-image: url(../img/Building.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 0.25%;
+  flex-grow: 1;
+  border-radius: 0 10px 0 0;
+  opacity: 80%;
+}
+
+#collectionAbout1 {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #c8c6d7;
+  border-radius: 0 0 10px 10px;
+}
+
+.card1 {
+  height: 30vh;
+  padding: 1%;
+  margin: 2%;
+  flex-basis: 25%;
+  background-color: white;
+}
+
+.card1 img {
+  height: 50%;
+  width: 100%;
+}
+
+#collectionAbout1 h2 {
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 2%;
+}
+
+#containerAbout1 h1 {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 1020px) {
+  .card1 {
+    height: 40vh;
+    flex-basis: 100%;
+  }
+
+  #textAbout1 {
+    flex-basis: 100%;
+  }
+
+  #backbackgroundAbout1 {
+    display: none;
+  }
+}

@@ -1,0 +1,368 @@
+:root {
+  --side-bar-width: 20vw;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+div#MainContent {
+  width: 100%;
+  background-color: #e5eafa;
+  background-size: cover;
+  transition: transform 0.2s ease;
+
+  -webkit-box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+}
+div#MainContent.Shifted {
+  transform: translate(var(--side-bar-width));
+}
+
+div#SideMenu {
+  position: fixed;
+  width: var(--side-bar-width);
+  height: 100%;
+  left: calc(-1 * var(--side-bar-width));
+  transition: transform 0.2s ease;
+  background-color: #333333;
+  background-size: cover;
+  align-content: flex-start;
+}
+div#SideMenu.Shifted {
+  transform: translate(var(--side-bar-width));
+}
+
+nav.Navbar {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  -webkit-box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0.005em 0.5em rgba(0, 0, 0, 0.75);
+  background-color: #d8d5db;
+}
+
+#SideBarList {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
+}
+
+nav.Navbar ul {
+  padding: 0;
+  height: 100%;
+  list-style: none;
+  margin: auto 0;
+  flex: 1; /*Fill in the rest of the space from the flex container*/
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+nav.Navbar li {
+  height: 100%;
+  display: inline-flex;
+  padding: 0;
+  margin: 0 1.5rem;
+}
+
+nav.Navbar li > a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav.Navbar ul li h1 {
+  align-items: center;
+  display: flex;
+  margin-left: -100px;
+}
+
+nav.Navbar li:first-of-type {
+  display: grid;
+  place-content: center;
+}
+
+nav.Navbar li #SideButton {
+  outline: none;
+  background-image: url(../img/sidebar.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2.4vw;
+  border: none;
+  height: 2.4vw;
+  background-color: inherit;
+}
+/* nav.Navbar ul li:nth-last-of-type(2) {
+  margin-left: auto;
+} */
+
+nav.Navbar ul li button {
+  height: 50%;
+  float: right;
+}
+
+#pageTitle {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+
+#SideBarList li {
+  margin: 0.5em;
+}
+
+#SideBarList li a {
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.5s ease;
+  display: block;
+  width: 100%;
+  padding: 7%;
+  border-radius: 4%;
+}
+
+#SideBarList li a:hover {
+  background-color: grey;
+}
+
+#profileTab {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#SideBarList li:first-of-type {
+  margin-top: 3em;
+}
+
+#hero {
+  background-image: url(../img/Bank\ Background.jpg);
+  width: 100%;
+  height: 60vh;
+}
+/* .slideImages{ 
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+}
+
+#coinsImg {
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+} 
+
+#buildingImg {
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+}
+
+#worldImg{
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+} */
+
+#container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#container div {
+  width: 20%;
+  flex-grow: 1;
+  height: 200px;
+}
+
+#BankCard {
+  background-image: url(../img/Bank\ Icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Loan {
+  background-image: url(../img/Loan\ Icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Meeting {
+  background-image: url(../img/Meeting\ Icon.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-common {
+  box-shadow: 1px 2px 5px #999;
+  transition: all 0.4s;
+}
+.card-common:hover {
+  box-shadow: 2px 3px 15px #999;
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+.task-border {
+  border-left: 3px solid #f66436;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 65vh;
+  padding-bottom: 2%;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 65vh;
+}
+
+.cardMaintenance {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 1%;
+  text-align: center;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.titleMaintenance {
+  color: grey;
+  font-size: 18px;
+}
+
+.buttonMaintenance {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cardMaintenance div a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.buttonMaintenance:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+#containerMaintenance {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#maintenanceText {
+  border-radius: 5px;
+  width: 25%;
+  margin: 2%;
+  padding: 10px;
+  background-color: lightsteelblue;
+  text-align: center;
+}
+
+#documentsText {
+  margin-top: 4vh;
+  border-radius: 5px;
+  width: 25%;
+  padding: 10px;
+  background-color: lightsteelblue;
+  height: fit-content;
+  width: fit-content;
+}
+
+#documentsText div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#documentsText ul {
+  display: block;
+  width: fit-content;
+}
+
+.hiddenItem {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  :root {
+    --side-bar-width: 60vw;
+  }
+  nav.Navbar ul li {
+    display: none;
+  }
+  nav.Navbar ul li:first-of-type {
+    display: block;
+  }
+
+  nav.Navbar li #SideButton {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .hiddenItem {
+    display: block;
+  }
+
+  #hero {
+    display: none;
+  }
+
+  #cardSection1 {
+    margin-top: 5%;
+  }
+
+  #collectionAbout1 {
+    flex-flow: column nowrap;
+  }
+  .card1 {
+    height: fit-content;
+  }
+  #maintenanceText {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+}
