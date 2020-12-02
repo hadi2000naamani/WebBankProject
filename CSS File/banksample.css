@@ -148,12 +148,49 @@ nav.Navbar ul li button {
 #SideBarList li:first-of-type {
   margin-top: 3em;
 }
+.hero{
+  display: none;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
-#hero {
+ #hero {
   background-image: url(../img/Bank\ Background.jpg);
   width: 100%;
   height: 60vh;
+} 
+#hero2{
+  background-image: url(../img/branch.jpg);
+  width: 100%;
+  height: 60vh;
 }
+#hero3{
+  background-image: url(../img/customer.jpg);
+  width: 100%;
+  height: 60vh;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 /* .slideImages{ 
   width: 100%;
   height: 60vh;

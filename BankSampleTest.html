@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body style="font-family: 'Raleway', sans-serif">
     <div id="SideMenu">
       <ul id="SideBarList">
@@ -44,9 +45,11 @@
           <li><button id="SideButton"></button></li>
           <li><a href="#MainContent">Home</a></li>
           <li><a href="#contactus">Contact Us</a></li>
-          <li><a href="#containerAbout1">About Us</a></li>
+          <li style="padding-right: 5%;"><a href="#containerAbout1">About Us</a></li>
+          
           <li id="pageTitle" style="padding-right: 5%">
-            <h1 class="text-center">Bank Sample</h1>
+            
+            <h1 class="text-center"><a id="icon"></a>Bank Sample</h1>
           </li>
           <li>
             <button id="signup" class="btn btn-outline-warning btn-block text-dark">
@@ -61,8 +64,11 @@
         </ul>
       </nav>
 
-      <div id="hero"></div>
-
+      <div class="slideshow-container">
+        <div id="hero" class="hero fade"></div>
+        <div class="hero fade" id="hero2"></div>
+        <div class="hero fade" id="hero3"></div>
+      </div>
       <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -239,7 +245,7 @@
                 <h2>Got Question?</h2>
                 <p>Stay connected</p>
               </div>
-              <form class="text-muted">
+              <form action="mailto:admin@banksample.com" method="POST" enctype="text/plain" class="text-muted">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" class="form-control" id="name" />
@@ -256,6 +262,7 @@
                     rows="4"
                   ></textarea>
                 </div>
+                
                 <button class="btn btn-outline-warning btn-block" type="submit">
                   Submit
                 </button>
@@ -287,7 +294,7 @@
       </footer>
     </div>
 
-    <script src="./Java File/clicks.js"></script>
+    <script src="./Java File/BankSampleTest.js"></script>
     <script>
       var SideButton = document.getElementById("SideButton");
       var MainContent = document.getElementById("MainContent");

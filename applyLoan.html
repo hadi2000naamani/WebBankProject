@@ -33,9 +33,9 @@
         <nav class = "Navbar">
             <ul>
                 <li><button id="SideButton"></button></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a href="BankSampleTest.html#MainContent">Home</a></li>
+                <li><a href="BankSampleTest.html#contactus">Contact Us</a></li>
+                <li><a href="BankSampleTest.html#containerAbout1">About Us</a></li>
                 <li id="pageTitle" style="padding-right: 17%;"><h1>Bank Sample</h1></li>
             </ul>
         </nav>
@@ -50,7 +50,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-sm-10 col-md-8">
-                    <form class="text-muted" method="POST" action="mailto:hadi2000naamani@gmail.com?subject=Loan Application">
+                    <form class="text-muted" method="POST" id="loan-form">
                         <div class="form-group">
                             <label>Loan Type:</label>
                             <select class="form-control" required>
@@ -65,24 +65,45 @@
                         <label>Amount:</label>
                         <div class="input-group">
                             <span class="input-group-text">$</span>
-                            <input type="number" class="form-control" min="500" step="10" placeholder="Loan amount" required>
+                            <input id="amount" type="number" class="form-control" min="500" step="10" placeholder="Loan amount" required>
                         </div>
                         <div class="form-group mt-3">
                             <label>Loan Period:</label>
-                            <select class="form-control" required>
-                                <option value="Long">Long-Term</option>
-                                <option value="Long">Short-Term</option>
+                            <select id="years" class="form-control" required>
+                                <option value="7">Long-Term (7 years)</option>
+                                <option value="2">Short-Term (2 years)</option>
                             </select>
                             <input type="text" style="display: none;" placeholder="Specify">
                         </div>
                         <div class="form-group" style="padding-top: 2%;">
                             <label>Interest Rate(%):</label>
-                            <input type="text" value="1111" disabled>
+                            <input id="interest" type="text" value="20" disabled>
                         </div>
                         <br>
                         <p class="form-group text-black">Note that you will need to schedule a meeting and get the required documents stated in the list.</p>
-                        <button class="btn btn-outline-warning text-dark btn-block" type="submit">Submit</button>
+                        <button id="submit" class="btn btn-outline-warning text-dark btn-block" type="submit">Submit</button>
                     </form>
+                    <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Monthly Payment</span>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Total Payment</span>
+                                <input type="number" class="form-control" id="total-payment" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Total Interest</span>
+                                <input type="number" class="form-control" id="total-interest" disabled>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,6 +143,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./Java File/applyLoan.js"></script>
 
      <script>
       var SideButton = document.getElementById("SideButton");
