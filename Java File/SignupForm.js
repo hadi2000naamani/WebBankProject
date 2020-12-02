@@ -9,7 +9,6 @@ var login = document.getElementById("login");
 
 signup.addEventListener("click", signUp);
 login.addEventListener("click",logIn);
-submit.addEventListener("click", inputValidation);
 
 function signUp() {
     location.replace("SignupForm.html");

@@ -29,20 +29,29 @@
           <div class="row">
             <div class="col-md-8 m-auto">
               <h1 class="display-4 text-center">Sign Up</h1>
-              <form action="dashboard.html" name="myForm">
+              <form action="./PHP File/insert.php" method="POST" name="myForm">
                 <div class="form-group">
-                    <input id="fname" required type="name" class="form-control form-control-lg" placeholder="Enter Your Name" name="email" />
+                    <input id="fname" required type="name" class="form-control form-control-lg" placeholder="Enter Your Name" name="fname" />
                   </div>
                   <div class="form-group">
-                    <input id="lname" required type="name" class="form-control form-control-lg" placeholder="Enter Your Family Name" name="password" />
+                    <input id="lname" required type="name" class="form-control form-control-lg" placeholder="Enter Your Family Name" name="lname" />
                   </div>
                 <div class="form-group">
-                  <input id="email" required type="email" class="form-control form-control-lg" placeholder="Enter Your Email" name="email" />
+                  <input id="email" required  class="form-control form-control-lg" placeholder="Enter Your Email" name="email" />
                 </div>
                 <div class="form-group">
                   <input id="password" required type="password" class="form-control form-control-lg" placeholder="Enter Your Pasword" name="password" />
                 </div>
-                <button id="submit" type="submit" class="btn btn-outline-warning btn-block text-dark">Submit</button>
+                <input name="submit" id="submit" type="submit" value="Submit" class="btn btn-outline-warning btn-block text-dark">
+              
+                <!-- <?php
+                  if(isset($_POST['submit']))
+                  {
+                   $SQL = "INSERT INTO user (fname, lname, email, password) VALUES ($_POST['fname'], $_POST['lname'], $_POST['email'], $_POST['password'])";
+                   $result = mysql_query($SQL);
+                  }
+                ?> -->
+                
                 <div></div>
               </form>
             </div>
