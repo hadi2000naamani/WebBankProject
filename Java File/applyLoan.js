@@ -1,9 +1,18 @@
 var submit = document.getElementById('submit');
+var no = document.getElementById('no');
 
+
+no.addEventListener('click',reload);
 submit.addEventListener('click', function(e){
     setTimeout(calculate, 1000);
     e.preventDefault();
 });
+
+function reload(){
+    if(confirm("Are you sure?")){
+    location.reload();
+    }
+}
 
 function calculate(e){
     const amount = document.getElementById('amount');
