@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/university-solid.png" />
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="./CSS File/banksample.css"> 
+    <link rel="stylesheet" href="./CSS File/banksample.css">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -18,7 +18,39 @@
     />
   </head>
   <body style="font-family: 'Raleway', sans-serif">
-    <div id="SideMenu">
+  <?php
+      if (isset($_COOKIE['userTolkien'])) {
+          echo "<h1>Cookie exists" . $_COOKIE['userTolkien'] . "</h1>";
+
+          $host = '127.0.0.1';
+          $db   = 'usersdb';
+          $user = 'root';
+          $pass = '';
+          $charset = 'utf8mb4';
+
+          $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+          $options = [
+              PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+              PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+              PDO::ATTR_EMULATE_PREPARES   => false,
+          ];
+
+          $pdo = new PDO($dsn, $user, $pass, $options);
+
+          $stmt = $pdo->prepare("SELECT * FROM user WHERE accountNumb = :accountNumb");
+          $stmt->execute(['accountNumb' => $_COOKIE['userTolkien']]);
+          foreach($stmt as $row) {
+              $fullname = $row['fname']." ".$row['lname'];
+              $accountNumber = $row['accountNumb'];
+          }
+      } else {
+          echo "<h1>Cookie does not exist</h1>";
+          $fullname = 'no name';
+          $accountNumber = '';
+          // dont open anything
+      }
+  ?>
+  <div id="SideMenu">
       <ul id="SideBarList">
         <li id="profileTab">
           <i
@@ -57,29 +89,32 @@
               Fill in the required information, to make your Bank experience
               smoother
             </p>
-            <form action="add-experience.html">
+            <form action="./PHP File/editSubmit.php" method="GET">
               <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control form-control-lg"
-                  placeholder="Full Name"
-                  name="handle"
-                  required
-                />
+                  <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="Full Name"
+                          name="fullName"
+                          value="<?php echo $fullname; ?>"
+                          required
+                  />
                 <div class="form-group" style="padding-top: 2%;">
                 <input
-                  type="text"
-                  class="form-control form-control-lg"
-                  placeholder="Bank Account Number"
-                  name="account#"
-                  required
+                          type="text"
+                          class="form-control form-control-lg"
+                          placeholder="Bank Account Number"
+                          name="accountNumb"
+                          value="<?php echo $accountNumber; ?>"
+                          disabled
+                          required
                 />
               </div>
               <div class="form-group">
-                <select class="form-control form-control-lg" name="status">
+                <select class="form-control form-control-lg" name="currency">
                   <option value="0">Account Currency</option>
-                  <option value="lira">Lebanese Lira</option>
-                  <option value="Dollar">US Dollar</option>
+                  <option value="LBP">Lebanese Lira</option>
+                  <option value="USD">US Dollar</option>
                 </select>
                 <small class="form-text text-muted"
                   >Select the registered currency for your main account.</small
@@ -90,7 +125,7 @@
                   type="number"
                   class="form-control form-control-lg"
                   placeholder="Number of Running Accounts"
-                  name="Running Accounts"
+                  name="numbOfAccounts"
                 />
                 <small class="form-text text-muted"
                   >Fill in the number of current running accounts registered
@@ -114,13 +149,14 @@
                   type="text"
                   class="form-control form-control-lg"
                   placeholder="Main Branch Location"
-                  name="Location"
+                  name="branch"
                 />
                 <small class="form-text text-muted"
                   >Fill in the location of your main Bank Sample branch.
                 </small>
               </div>
               <button class="btn btn-outline-warning text-dark btn-block" type="submit" style="margin-bottom: 5%;">Submit</button>
+              </div>
             </form>
           </div>
         </div>
@@ -160,7 +196,7 @@
         }
       }
     </script>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
