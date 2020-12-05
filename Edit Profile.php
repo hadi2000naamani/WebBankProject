@@ -22,31 +22,36 @@
       if (isset($_COOKIE['userTolkien'])) {
           echo "<h1>Cookie exists" . $_COOKIE['userTolkien'] . "</h1>";
 
-          $host = '127.0.0.1';
-          $db   = 'usersdb';
-          $user = 'root';
-          $pass = '';
-          $charset = 'utf8mb4';
+          // $host = '127.0.0.1';
+          // $db   = 'usersdb';
+          // $user = 'root';
+          // $pass = '';
+          // $charset = 'utf8mb4';
 
-          $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-          $options = [
-              PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-              PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-              PDO::ATTR_EMULATE_PREPARES   => false,
-          ];
+          // $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+          // $options = [
+          //     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+          //     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+          //     PDO::ATTR_EMULATE_PREPARES   => false,
+          // ];
 
-          $pdo = new PDO($dsn, $user, $pass, $options);
 
+          // $pdo = new PDO($dsn, $user, $pass, $options);
+          $pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=usersdb','root','root');
           $stmt = $pdo->prepare("SELECT * FROM user WHERE accountNumb = :accountNumb");
           $stmt->execute(['accountNumb' => $_COOKIE['userTolkien']]);
           foreach($stmt as $row) {
               $fullname = $row['fname']." ".$row['lname'];
               $accountNumber = $row['accountNumb'];
+              $numbOfAccounts = $row['numbOfAccounts'];
+              $branch = $row['branch'];
           }
       } else {
           echo "<h1>Cookie does not exist</h1>";
           $fullname = 'no name';
           $accountNumber = '';
+          $numbOfAccounts ='';
+          $branch ='';
           // dont open anything
       }
   ?>
@@ -71,9 +76,9 @@
       <nav class="Navbar">
         <ul>
           <li><button id="SideButton"></button></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="BankSampleTest.html#MainContent">Home</a></li>
+          <li><a href="BankSampleTest.html#contactus">Contact Us</a></li>
+          <li><a href="BankSampleTest.html#containerAbout1">About Us</a></li>
           <li id="pageTitle" style="padding-right: 17%">
             <h1 class="text-center">Bank Sample</h1>
           </li>
@@ -123,6 +128,7 @@
               <div class="form-group">
                 <input
                   type="number"
+                  value="<?php echo $numbOfAccounts; ?>"
                   class="form-control form-control-lg"
                   placeholder="Number of Running Accounts"
                   name="numbOfAccounts"
@@ -147,6 +153,7 @@
               <div class="form-group">
                 <input
                   type="text"
+                  value="<?php echo $branch; ?>"
                   class="form-control form-control-lg"
                   placeholder="Main Branch Location"
                   name="branch"
