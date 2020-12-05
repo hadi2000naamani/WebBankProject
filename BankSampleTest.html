@@ -30,7 +30,7 @@
           ></i
           >Profile
         </li>
-        <li class="animItem"><a href="Edit%20Profile.php">Edit Profile</a></li>
+        <li class="animItem" id="editProfileButton"><a href="Edit%20Profile.php">Edit Profile</a></li>
         <li class="animItem"><a href="#">Business</a></li>
         <li class="animItem"><a href="#">Picture Gallery</a></li>
         <li class="animItem"><a href="MaintenanceTeam.html">Maintenance Team</a></li>
@@ -50,6 +50,13 @@
           <li id="pageTitle" style="padding-right: 5%">
             
             <h1 class="text-center"><a id="icon"></a>Bank Sample</h1>
+          </li>
+          <li>
+            <form action="./PHP File/logout.php" method="POST">
+              <button id="logout" class="btn btn-outline-danger btn-block text-dark" style="display: none;">
+                Log Out
+              </button>
+            </form>
           </li>
           <li>
             <button id="signup" class="btn btn-outline-warning btn-block text-dark">
@@ -317,6 +324,7 @@
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+    <script src="./Java File/cookies.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

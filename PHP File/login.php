@@ -31,12 +31,14 @@
                 $cookie_name = "userTolkien";
                 $value = $row['accountNumb'];
                 setcookie($cookie_name, $value, time() + (86400*30), '/');
+                header("Location: ../BankSampleTest.html");
             } else {
                 //Wrong Password Inserted
                 echo '<script>alert("Wrong Password!")</script>';
+                header("Location: ../LogInForm.html");
             }
             //echo $row['password']."\t".$row['accountNumb']."\n";
         }
     }
-    header("Location: ../BankSampleTest.html");
+    
 ?>

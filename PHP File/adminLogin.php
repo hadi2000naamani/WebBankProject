@@ -5,7 +5,7 @@ $pdo = new PDO('mysql:host=127.0.0.1;port=3306;dbname=admindb','root','root');
 
 // $stmt->execute()
 
-$stmt = $pdo->prepare("SELECT Password FROM admin WHERE Username = :Username");
+$stmt = $pdo->prepare("SELECT Password, Username FROM admin WHERE Username = :Username");
     $stmt->execute(['Username' => $_POST['username']]);
 
     if ($stmt->rowCount() == 0) {
@@ -21,6 +21,11 @@ $stmt = $pdo->prepare("SELECT Password FROM admin WHERE Username = :Username");
                 // Correct Password Inserted
                 $_SESSION["username"] = $_POST["username"];
                 $_SESSION["success"] = "Logged in.";
+
+                $cookie_name = "adminTolkien";
+                $value = $row['Username'];
+                setcookie($cookie_name, $value, time() + (86400*30), '/');
+
                 echo $_SESSION["username"];
                 header('Location: ../BankSampleTest.html');
                 // return;
