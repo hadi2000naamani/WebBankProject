@@ -21,6 +21,7 @@
 
     if ($stmt->rowCount() == 0) {
         //Your email isn't even in the database
+        header("Location: ../LogInForm.html");
         echo '<script>alert("Invalid Email!")</script>';
     } else {
         foreach ($stmt as $row)

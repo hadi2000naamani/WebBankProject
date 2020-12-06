@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./Java%20File/cookies.js" ></script>
   </head>
 
   <body style="font-family: 'Raleway', sans-serif">
@@ -41,22 +42,31 @@
       <nav class="Navbar">
         <ul>
           <li><button id="SideButton"></button></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="BankSampleTest.html#MainContent">Home</a></li>
+          <li><a href="BankSampleTest.html#contactus">Contact Us</a></li>
+          <li style="padding-right: 5%;"><a href="BankSampleTest.html#containerAbout1">About Us</a></li>
           <li id="pageTitle"><h1 class="text-center">Bank Sample</h1></li>
           <li>
-            <button
+            <form action="./PHP File/logout.php" method="POST">
+              <button id="logout" class="btn btn-outline-danger btn-block text-dark" style="display: none;">
+                Log Out
+              </button>
+            </form>
+          </li>
+          <li>
+            <button onclick="location.replace('SignupForm.php');"
               class="btn btn-outline-warning btn-block text-dark"
               style="height: 50%; width: 100%"
+              id="signup"
             >
               Sign Up
             </button>
           </li>
           <li>
-            <button
+            <button onclick="location.replace('LoginForm.html');"
               class="btn btn-outline-primary btn-block text-dark"
               style="height: 50%; width: 100%"
+              id="login"
             >
               Log In
             </button>
@@ -75,8 +85,36 @@
 
       <div id="containerMaintenance">
         <div class="cardMaintenance">
-          <img src="./img/Unavailable.png" alt="John" style="width: 100%" />
-          <h1>Ahmad Chehade</h1>
+          <img src="./img/Suduko.png" alt="Sudoku" style="width: 80%;border-radius: 1rem"/>
+          <h1>Ahmad</h1>
+          <p class="titleMaintenance">CEO & Founder, DragonBall Hair</p>
+          <p>LAU</p>
+          <div class="py-2">
+            <a href="#"><i class="fab fa-instagram fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-whatsapp fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-x mx-2"></i></a>
+          </div>
+          <p><button class="buttonMaintenance">Contact</button></p>
+        </div>
+
+        <div class="cardMaintenance">
+          <img src="./img/Pocahontas.png" alt="Pocahontas" style="width: 80%;border-radius: 1rem" />
+          <h1>Pocahontas</h1>
+          <p class="titleMaintenance">CEO & Founder, Example</p>
+          <p>LAU</p>
+          <div class="py-2">
+            <a href="#"><i class="fab fa-instagram fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-whatsapp fa-x mx-2"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-x mx-2"></i></a>
+          </div>
+          <p><button class="buttonMaintenance">Contact</button></p>
+        </div>
+
+        <div class="cardMaintenance">
+          <img src="./img/Rawad.png" alt="Rawad" style="width: 80%;border-radius: 1rem" />
+          <h1>Rawad</h1>
           <p class="titleMaintenance">CEO & Founder, Example</p>
           <p>Harvard University</p>
           <div class="py-2">
@@ -89,38 +127,10 @@
         </div>
 
         <div class="cardMaintenance">
-          <img src="./img/Unavailable.png" alt="John" style="width: 100%" />
-          <h1>Ahmad Chehade</h1>
+          <img src="./img/Hadi.png" alt="Hadi" style="width: 80%;border-radius: 1rem" />
+          <h1>Hadi</h1>
           <p class="titleMaintenance">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <div class="py-2">
-            <a href="#"><i class="fab fa-instagram fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-facebook fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-whatsapp fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-linkedin fa-x mx-2"></i></a>
-          </div>
-          <p><button class="buttonMaintenance">Contact</button></p>
-        </div>
-
-        <div class="cardMaintenance">
-          <img src="./img/Unavailable.png" alt="John" style="width: 100%" />
-          <h1>Ahmad Chehade</h1>
-          <p class="titleMaintenance">CEO & Founder, Example</p>
-          <p>Harvard University</p>
-          <div class="py-2">
-            <a href="#"><i class="fab fa-instagram fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-facebook fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-whatsapp fa-x mx-2"></i></a>
-            <a href="#"><i class="fab fa-linkedin fa-x mx-2"></i></a>
-          </div>
-          <p><button class="buttonMaintenance">Contact</button></p>
-        </div>
-
-        <div class="cardMaintenance">
-          <img src="./img/Unavailable.png" alt="John" style="width: 100%" />
-          <h1>Ahmad Chehade</h1>
-          <p class="titleMaintenance">CEO & Founder, Example</p>
-          <p>Harvard University</p>
+          <p>LAU</p>
           <div class="py-2">
             <a href="#"><i class="fab fa-instagram fa-x mx-2"></i></a>
             <a href="#"><i class="fab fa-facebook fa-x mx-2"></i></a>

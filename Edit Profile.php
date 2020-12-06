@@ -20,7 +20,7 @@
   <body style="font-family: 'Raleway', sans-serif">
   <?php
       if (isset($_COOKIE['userTolkien'])) {
-          echo "<h1>Cookie exists" . $_COOKIE['userTolkien'] . "</h1>";
+          //echo "<h1>Cookie exists" . $_COOKIE['userTolkien'] . "</h1>";
 
           // $host = '127.0.0.1';
           // $db   = 'usersdb';

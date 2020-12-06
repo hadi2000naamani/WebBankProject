@@ -8,7 +8,7 @@ login.addEventListener("click",logIn);
 
 
 function signUp() {
-    location.replace("SignupForm.html");
+    location.replace("SignupForm.php");
 }
 
 function logIn() {

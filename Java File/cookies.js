@@ -1,6 +1,7 @@
 var signup = document.getElementById("signup");
 var login = document.getElementById("login");
 var logout = document.getElementById("logout");
+var dashboard = document.getElementById("dashboard");
 var editprofile = document.getElementById("editProfileButton");
 
 var myCookue = getCookie("userTolkien");
@@ -11,7 +12,8 @@ if(myCookue != null) {
         login.style.display = "none";
         signup.style.display = "none";
         logout.style.display = "block";
-        
+        dashboard.style.display = "none";
+
     }
 }
 
@@ -22,21 +24,20 @@ else if(myCookie != null) {
         signup.style.display = "none";
         logout.style.display = "block";
         editprofile.style.display = "none";
+        dashboard.style.display = "block";
     }
 }
 
-else{ 
-        window.addEventListener("load",hide);
+else{
+    window.addEventListener("load",hide);
     function hide() {
         login.style.display = "block";
         signup.style.display = "block";
         logout.style.display = "none";
         editprofile.style.display = "none";
+        dashboard.style.display = "none";
     }
 }
-
-
-
 
 
 function getCookie(name) {

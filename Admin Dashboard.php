@@ -14,12 +14,15 @@
   </head>
 
   <body style="font-family: 'Raleway', sans-serif">
+    <?php
+        include "./PHP File/users.php";
+    ?>
     <div id = "MainContent">
         <nav class = "Navbar">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a href="BankSampleTest.html#MainContent">Home</a></li>
+                <li><a href="BankSampleTest.html#contactus">Contact Us</a></li>
+                <li style="padding-right: 5%;"><a href="BankSampleTest.html#containerAbout1">About Us</a></li>
                 <li id="pageTitle" style="padding-right: 230px;"><h1>Bank Sample</h1></li>
             </ul>
         </nav>
@@ -30,6 +33,10 @@
             <div class="col-md-12">
             <h1 class="display-4" style="margin-top: 90px;">Dashboard</h1>
             <!-- Scheduled Meetings -->
+            <div>
+                <h4 class="mb-2" style="text-align: left; margin-top: 30px; margin-left: 30px;">Users:</h4>
+                <?php UserTable();?>
+            </div>
             <div>
                 <h4 class="mb-2" style="text-align: left; margin-top: 70px;">Scheduled Meetings:</h4>
                 <table class="table">
@@ -99,10 +106,6 @@
         </div>
     </div>
 
-
-    <!-- <div>
-      <?php include 'users.php';?>
-    </div> -->
     
 
     <footer class="bg-light" style="margin-top: 175px;">
