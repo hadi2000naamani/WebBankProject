@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col-md-8 m-auto">
               <h1 class="display-4 text-center">Sign Up</h1>
-              <form action="./PHP File/insert.php" method="POST" name="myForm">
+              <form id="loginForm" action="./PHP File/insert.php" method="POST" name="myForm">
                 <?php session_start()?>
                 <div class="form-group">
                     <input value =
@@ -50,9 +50,9 @@
                 </div>
                 <div class="form-group">
                   <input id="password" required type="password" class="form-control form-control-lg" placeholder="Enter Your Pasword" name="password" />
+                    <p class = "text-secondary">Password should be atleast 8 characters.</p>
                 </div>
-                <input name="submit" id="submit" type="submit" value="Submit" class="btn btn-outline-warning btn-block text-dark">
-                
+                <input name="submit" disabled id="submit" type="submit" value="Submit" class="btn btn-outline-warning btn-block text-dark">
                 <div></div>
               </form>
             </div>
@@ -82,7 +82,23 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4c8ff7f160.js" crossorigin="anonymous"></script>
-  
+
+  <script type="text/javascript">
+    let pass = document.getElementById("password");
+    let submit = document.getElementById("submit");
+    let notice = document.getElementById("notice");
+    pass.addEventListener("input", PassValidate, true);
+    function PassValidate(event) {
+        console.log(pass.value);
+        if (pass.value.length >= 8) {
+            submit.disabled = false;
+            // notice.innerHTML = " ";
+        } else {
+            submit.disabled = true;
+            // notice.innerHTML = "The Password should be atleast 8 characters.";
+        }
+    }
+  </script>
 </body>
 
 </html>
