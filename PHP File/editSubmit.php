@@ -31,4 +31,5 @@
     );
 
     // echo a message to say the UPDATE succeeded
-    echo $stmt->rowCount() . " records UPDATED successfully";
+    //echo $stmt->rowCount() . " records UPDATED successfully";
+    header("Location: ../BankSampleTest.html");

@@ -14,6 +14,7 @@
   </head>
 
   <body style="font-family: 'Raleway', sans-serif">
+  <script src="./Java%20File/PermissionAdmin.js" type="text/javascript"></script>
     <?php
         include "./PHP File/users.php";
     ?>

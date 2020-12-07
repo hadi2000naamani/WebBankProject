@@ -11,7 +11,7 @@
 </head>
 
 <body style="font-family: 'Raleway', sans-serif;">
-
+  <script type="text/javascript" src="./Java%20File/PermissionLoggedIn.js"></script>
   <div id = "MainContent">
     <nav class = "Navbar">
         <ul>

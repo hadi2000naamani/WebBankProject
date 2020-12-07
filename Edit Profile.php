@@ -18,6 +18,7 @@
     />
   </head>
   <body style="font-family: 'Raleway', sans-serif">
+  <script type="text/javascript" src="./Java%20File/PermissionEdit.js"></script>
   <?php
       if (isset($_COOKIE['userTolkien'])) {
           //echo "<h1>Cookie exists" . $_COOKIE['userTolkien'] . "</h1>";
@@ -47,8 +48,7 @@
               $branch = $row['branch'];
           }
       } else {
-          echo "<h1>Cookie does not exist</h1>";
-          $fullname = 'no name';
+          $fullname = '';
           $accountNumber = '';
           $numbOfAccounts ='';
           $branch ='';
@@ -98,6 +98,7 @@
               <div class="form-group">
                   <input
                           type="text"
+                          disabled
                           class="form-control form-control-lg"
                           placeholder="Full Name"
                           name="fullName"
